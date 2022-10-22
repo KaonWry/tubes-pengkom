@@ -58,13 +58,14 @@ def pintuMasuk():
     waktu = [0] * 2
     waktu = menuPintuMasuk["Waktu Masuk"].split(" ")
     pukul = [0] * 3
-    pukul = waktu[0]
+    pukul = waktu[1]
     pukul = pukul.split(":")
-    pukul = (((pukul[0]*60)+pukul[1])*60)+pukul[2]
-    tanggal = waktu[1]
-    tanggal = time.mktime(datetime.datetime.strptime(tanggal, "%d/%m/%Y").timetuple())
+    print(pukul)
+    pukul = (((int(pukul[0])*60)+int(pukul[1]))*60)+int(pukul[2])
+    tanggal = waktu[0]
+    tanggal = int(time.mktime(datetime.datetime.strptime(tanggal, "%d-%m-%Y").timetuple()))
     
-    print(pukul, tanggal, pukul + tanggal)
+    print(str(pukul), str(tanggal),)
     
     # Membership
     if(menuPintuMasuk["Kartu Member"]):
@@ -73,8 +74,9 @@ def pintuMasuk():
         member = "N"
         
     # Angka random pengaman
+    random = str("")
     for i in range(3):
-        random += randint(0,9)
+        random += str(randint(0,9))
     
     
     
