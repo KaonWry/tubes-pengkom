@@ -9,10 +9,10 @@ from barcode.writer import ImageWriter
 import re
 import inquirer
 import os
-from random import seed
-from random import randint
-seed(1)
 
+# Bersihkan halaman terminal
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
 
 # TUI pintu masuk 
 def pintuMasuk():
@@ -45,11 +45,11 @@ def pintuMasuk():
     
     # Tipe kendaraan
     if(menuPintuMasuk["Tipe Kendaraan"] == "Mobil"):
-        tipeKendaraan = str("1")
+        tipeKendaraan = str("MB")
     elif(menuPintuMasuk["Tipe Kendaraan"] == "Motor"):
-        tipeKendaraan = str("2")
+        tipeKendaraan = str("MT")
     elif(menuPintuMasuk["Tipe Kendaraan"] == "Truk/Bus"):
-        tipeKendaraan = str("3")
+        tipeKendaraan = str("TR")
         
     # Plat nomor
     platNomor = (menuPintuMasuk["Plat Nomor"].replace(" ", "")).upper()
@@ -60,7 +60,6 @@ def pintuMasuk():
     pukul = [0] * 3
     pukul = waktu[1]
     pukul = pukul.split(":")
-    print(pukul)
     pukul = (((int(pukul[0])*60)+int(pukul[1]))*60)+int(pukul[2])
     tanggal = waktu[0]
     tanggal = int(time.mktime(datetime.datetime.strptime(tanggal, "%d-%m-%Y").timetuple()))
@@ -69,16 +68,14 @@ def pintuMasuk():
     
     # Membership
     if(menuPintuMasuk["Kartu Member"]):
-        member = "Y"
+        membership = "Y"
     else:
-        member = "N"
+        membership = "N"
         
-    # Angka random pengaman
-    random = str("")
-    for i in range(3):
-        random += str(randint(0,9))
-    
-    
+    barcodePintu = str(membership) + str(int(pukul) + int(tanggal)) + str(tipeKendaraan) + str(platNomor)
+    print(barcodePintu)
+    input("Press Enter to continue...")
+    cls(0)
     
 
 # TUI pintu keluar
@@ -99,9 +96,6 @@ def pintuKeluar():
     menuPintuKeluar = inquirer.prompt(menuPintuKeluar)
    
 
-# Bersihkan halaman terminal
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
 
     
 # TUI menu utama
