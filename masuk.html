@@ -24,7 +24,7 @@
       <h1>PT. EZ PARK</h1>
       <h3>Pintu Masuk</h3>
       <!-- FORM -->
-      <form class="formIsian" method="post">
+      <form class="formIsian" method="post" action="{{ url_for('pintuMasuk')}}" enctype="multipart/form-data">
         <!-- DROPDOWN TIPE KENDARAAN -->
         <label for="tipeKendaraan">Tipe kendaraan: </label>
         <select name="tipeKendaraan" id="tipeKendaraan">
