@@ -23,7 +23,7 @@ h1{
 .nav-link:disabled{
     color: rgb(127, 107, 216);
 }
-.barcode-output{
+.form-output{
     margin-left: auto;
     margin-right: auto;
     text-align: center;

@@ -20,7 +20,7 @@
         </nav>
     </head>
     <body>
-        <h1>PT. EZ PARK</h1>
+        <h1> <img src="{{ url_for('static', filename='img/crown.png')}}" alt="" style="height: 50px;"> PT. EZ PARKING</h1>
         <h3>Pintu Keluar</h3>
 
         <form class="formIsian" action="/k" method="post" enctype="multipart/form-data">
@@ -49,22 +49,49 @@
                 <input type="text" name="jmlhBayar" id="jmlhBayar" class="form-control">
             </div>
             <!-- SUBMIT -->
-            <br> <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <br> <button type="submit" class="btn btn-primary">Submit</button> <button type="reset" class="btn btn-primary">Clear</button>
+        </form> 
 
         <!-- OUTPUT -->
-        <p>
-            Kendaraan           : {{kendaraan}} <br>
-            Masuk               : {{masuk}} <br>
-            Keluar              : {{keluar}} <br>
-            Lama parkir         : {{lamaParkir}} <br>
-            Membership          : {{membership}} <br>
-            Total biaya parkir  : {{biayaParkir}} <br>
-            <br>
-            Pembayaran          : {{pembayaran}} <br>
-            Kembalian           : {{kembalian}} <br>
-        </p>
-
+        {% if kendaraan %}
+            <table class="form-output" style="text-align: left;">
+                <tbody>
+                  <tr>
+                    <td>Kendaraan</td>
+                    <td> : {{kendaraan}}</td>
+                  </tr>
+                  <tr>
+                    <td>Masuk</td>
+                    <td> : {{masuk}}</td>
+                  </tr>
+                  <tr>
+                    <td>Keluar</td>
+                    <td> : {{keluar}}</td>
+                  </tr>
+                  <tr>
+                    <td>Lama parkir</td>
+                    <td> : {{lamaParkir}}</td>
+                  </tr>
+                  <tr>
+                    <td>Membership</td>
+                    <td> : {{membership}}</td>
+                  </tr>
+                  <tr>
+                    <td>Total biaya parkir&nbsp;&nbsp;</td>
+                    <td> : {{biayaParkir}}</td>
+                  </tr>
+                  <tr>
+                    <td>Pembayaran</td>
+                    <td> : {{pembayaran}}</td>
+                </tr>
+                <tr>
+                    <td>Kembalian</td>
+                    <td> : {{kembalian}}</td>
+                </tr>
+                </tbody>
+            </table>
+        {% else %}
+        {% endif %}
 
         <!-- JQUERY -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
