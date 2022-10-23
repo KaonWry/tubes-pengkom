@@ -1,21 +1,13 @@
 body{
-    font-family: Garamond;
+    font-family: 'Courier New', Courier, monospace;
 }
-p{
+p, h1, h3, .formIsian{
     padding-left: 20px;
 }
 h1{
-    padding-left: 20px;
     padding-top: 10px;
 }
-h3{
-    padding-left: 20px;
-}
-.formIsian{
-    padding-left: 20px;
-    line-height: 1.5;
-}
-.inputfield{
+.formIsian, .inputfield{
     line-height: 1.5;
 }
 .nav{

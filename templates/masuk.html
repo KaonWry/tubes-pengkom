@@ -16,8 +16,8 @@
     <!-- TOP LABEL -->
     <nav class="nav">
       <a class="nav-link disabled" style="color: rgb(165, 171, 253); background-color: rgb(25, 77, 156);">Pintu Masuk</a>
-      <a class="nav-link" href="keluar.html">Pintu Keluar</a>
-        <a class="nav-link" href="#">Tentang Kami</a>    
+      <a class="nav-link" href="/bukaPintuKeluar" action="/bukaPintuKeluar">Pintu Keluar</a>
+      <a class="nav-link" href="#">Tentang Kami</a>    
     </nav>
   </head>
   <body>
@@ -26,14 +26,17 @@
       <!-- FORM -->
       <form class="formIsian" method="post" action="/" enctype="multipart/form-data">
         <!-- DROPDOWN TIPE KENDARAAN -->
+        <div class="form-group">
         <label for="tipeKendaraan">Tipe kendaraan: </label>
-        <select name="tipeKendaraan" id="tipeKendaraan">
-          <option value="MB">Mobil</option>
-          <option value="MT">Motor</option>
-          <option value="TR">Truk/bus</option>
+        <select name="tipeKendaraan" id="tipeKendaraan" class="custom-select" required>
+          <option value="">Pilih:</option>
+          <option value="Mobil">Mobil</option>
+          <option value="Motor">Motor</option>
+          <option value="Truk/bus">Truk/bus</option>
         </select>
+        </div>
         <!-- TEXTBOX PLAT NOMOR KENDARAAN -->
-        <div>
+        <div style="padding-bottom: 10px;">
           <label for="platNomor" class="form-label">Plat nomor kendaraan:</label>
           <input type="text" name="platNomor" id="platNomor" class="form-control" required pattern="[a-zA-Z]+\s+[0-9]+\s+[a-zA-Z]+">
         </div>
@@ -51,7 +54,7 @@
         </div>
         <!-- DATE PICKER WAKTU -->
         <div class="row form-group">
-          <label for="waktuMasuk" style="padding-top: 7.5px; padding-left: 15px;">Waktu masuk: </label>
+          <label for="waktuMasuk" style="padding-top: 7px; padding-left: 15px;">Waktu masuk: </label>
           <div class="col-sm-6">
             <div class="form-group">
                   <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
@@ -64,7 +67,7 @@
           </div>
         </div>
         <!-- SUBMIT -->
-        <br> <button type="submit" class="btn btn-primary">Submit</button>
+        <br> <button type="submit" class="btn btn-primary">Submit</button> <button type="reset" class="btn btn-primary">Clear</button>
       </form> <br>
       <div class="barcode-output">
         <!-- DIV OUTPUT BARCODE -->
