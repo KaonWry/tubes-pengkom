@@ -33,9 +33,9 @@
           <option value="trukBus">Truk/bus</option>
         </select>
         <!-- TEXTBOX PLAT NOMOR KENDARAAN -->
-        <div class="form-floating" style="padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+        <div>
+          <label for="platNomor" class="form-label">Plat nomor kendaraan:</label>
           <input type="text" name="platNomor" id="platNomor" class="form-control" required pattern="[a-zA-Z]+\s+[0-9]+\s+[a-zA-Z]+">
-          <label for="platNomor" style="padding-top: 20px;">Plat nomor kendaraan:</label>
         </div>
         <!-- RADIO BUTTON KEPEMILIKAN MEMBERSHIP -->
         <label for="membership">Kepemilikan kartu membership: </label>
@@ -49,9 +49,9 @@
           <input type="radio" name="membership" id="n" class="form-check-input">
           <label for="n" class="form-check-label">Tidak</label>
         </div>
-        <!-- DATE TIME PICKER -->
+        <!-- DATE PICKER WAKTU -->
         <div class="row">
-          <label for="waktuMasuk">Waktu masuk: </label>
+          <label for="waktuMasuk" class="form-label">Waktu masuk: </label>
           <div class="col-sm-6">
               <div class="form-group">
                   <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
