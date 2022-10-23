@@ -83,7 +83,7 @@ def pintuKeluar():
         waktuParkir = ((pukul + tanggal) - waktuTiba)/3600
         
         # Hitung biaya jam pertama
-        if(((pukul + tanggal) - waktuTiba < 5*60) or (membership == "y")):
+        if(((pukul + tanggal) - waktuTiba < 5*60) or (membership == "Y")):
             biayaJam1 = 0
         else:
             if (tipeKendaraan == "MT"):
