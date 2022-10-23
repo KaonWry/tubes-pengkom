@@ -1,0 +1,16 @@
+barcode            
+click              
+DateTime           
+Flask              
+itsdangerous       
+Jinja2             
+Levenshtein        
+MarkupSafe         
+Pillow             
+pip                
+python-Levenshtein 
+pytz             
+rapidfuzz        
+setuptools       
+Werkzeug         
+zope.interface     
