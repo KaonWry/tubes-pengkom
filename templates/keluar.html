@@ -16,12 +16,12 @@
         <nav class="nav">
             <a class="nav-link" href="/bukaPintuMasuk" action="/bukaPintuMasuk">Pintu Masuk</a>
             <a class="nav-link disabled" style="color: rgb(165, 171, 253); background-color: rgb(25, 77, 156);">Pintu Keluar</a>
-            <a class="nav-link" href="#">Tentang Kami</a>    
+            <a class="nav-link" href="/bukaTentangKami">Tentang Kami</a>    
         </nav>
     </head>
     <body>
-        <h1> <img src="{{ url_for('static', filename='img/crown.png')}}" alt="" style="height: 50px;"> PT. EZ PARKING</h1>
-        <h3>Pintu Keluar</h3>
+        <h1 class="form-output"> <img src="{{ url_for('static', filename='img/crown.png')}}" alt="" style="height: 50px;"> PT. EZ PARKING</h1>
+        <h3 class="form-output">Pintu Keluar</h3>
 
         <form class="formIsian" action="/k" method="post" enctype="multipart/form-data">
             <!-- TEXTBOX BARCODE -->

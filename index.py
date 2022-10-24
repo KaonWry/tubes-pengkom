@@ -13,8 +13,15 @@ from flask import Flask, request, render_template
 # Flask constructor
 app = Flask(__name__)  
 
+
+# Program startup
+@app.route("/")
+def startup():
+    return render_template("tentang-kami.html")
+
+
 # Program pintu masuk
-@app.route("/", methods =["POST", "GET"])
+@app.route("/m", methods =["POST", "GET"])
 def pintuMasuk():
     if (request.method == "POST"):
         tipeKendaraan = request.form.get("tipeKendaraan")
@@ -133,9 +140,9 @@ def pintuKeluar():
         elif (membership == "N"):
             membership = "Tidak ada"
         
-        biayaParkir = f"Rp. {biayaParkir:,},00"
-        pembayaran = f"Rp. {jmlhBayar:,},00"
-        kembalian = f"Rp. {kembalian:,},00"
+        biayaParkir = f"Rp.{biayaParkir:,},00"
+        pembayaran = f"Rp.{jmlhBayar:,},00"
+        kembalian = f"Rp.{kembalian:,},00"
         
         return render_template("keluar.html", kendaraan=kendaraan, masuk=masuk, keluar=keluar, lamaParkir=lamaParkir, membership=membership, biayaParkir=biayaParkir, pembayaran=pembayaran, kembalian=kembalian)
 
@@ -156,7 +163,10 @@ def bukaPintuMasuk():
 def bukaPintuKeluar():
     return render_template("keluar.html")
 
-
+# Program buka rincian harga
+@app.route("/bukaTentangKami")
+def bukaTentangKami():
+    return render_template("tentang-kami.html")
 
 
 if __name__=='__main__':

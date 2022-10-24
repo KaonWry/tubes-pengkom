@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pintu Masuk</title>
+    <!-- FONT AWESOME -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/fontawesome.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/solid.min.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- LOCAL STYLESHEET -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css')}}">
+    <!-- DATE TIME PICKER CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+    <!-- TOP LABEL -->
+    <nav class="nav">
+      <a class="nav-link" href="/bukaPintuMasuk">Pintu Masuk</a>
+      <a class="nav-link" href="/bukaPintuKeluar" action="/bukaPintuKeluar">Pintu Keluar</a>
+      <a class="nav-link disabled" style="color: rgb(165, 171, 253); background-color: rgb(25, 77, 156);">Tentang Kami</a>    
+    </nav>
+  </head>
+  <body>
+    <h1 class="form-output"> <img src="{{ url_for('static', filename='img/crown.png')}}" alt="" style="height: 50px;"> PT. EZ PARKING</h1>
+    <h3 class="form-output">Rincian Harga</h3><br><br>
+    <table class="form-output" style="text-align: left; font-size: larger; line-height: 40px; ">
+      <thead>
+        <tr>
+          <th>Jenis kendaraan&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Harga jam pertama&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Harga tiap jam&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Motor <br></td>
+          <td>Rp.3,000.00</td>
+          <td>Rp.2,000.00</td>
+        </tr>
+        <tr>
+          <td>Mobil <br></td>
+          <td>Rp.5,000.00</td>
+          <td>Rp.3,000.00</td>
+        </tr>
+        <tr>
+          <td>Truk/bus <br></td>
+          <td>Rp.8,000.00</td>
+          <td>Rp.5,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <ul>
+        <li>Anggota membership digratiskan 1 jam pertama</li>
+        <li>Biaya parkir 1 jam pertama dihitung 5 menit setelah masuk kawasan parkir</li>
+        <li>Jika berada di kawasan parkir kurang dari 5 menit, maka tidak dikenakan biaya</li>
+        <li>Bila struk hilang, maka akan dikenakan biaya sebesar Rp.20,000.00 + biaya parkir</li>
+        <li>Segala kerusakan dan kehilangan barang menjadi tanggung jawab pemilik kendaraan, tidak ada penggantian dalam bentuk apapun</li>
+      </ul>
+    </p>
+  </body>
+</html>
